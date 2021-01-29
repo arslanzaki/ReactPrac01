@@ -1,25 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
+import './Hello';
+import Hello from './Hello';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(props) {
+  return <div>
+    Hello From ZAKI {props.name} Age = {props.age}
+    <br/>
+    <Hello name = {props.name}> </Hello>
+        </div>
+  
 }
+
+
+/*
+function App({name,age}) {
+  return <div>
+    Hello From ZAKI {name} Age = {age}
+    <br/>
+    <Hello name = {name}></Hello>
+    </div>
+}
+
+/*
+
++
+let user = {name: "Arslan", age: 45}
+So,
+let {name, age} = user
+is Equal to
+let name = user.name;
+let age = user.age;
+
+This is Destructuring
+
+*/
 
 export default App;
